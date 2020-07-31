@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: BastionSystemPolicy
+metadata:
+  name: group-1-w-passwd
+  microservice_name: multiubuntu
+spec:
+  selector:
+    matchLabels:
+      group: group-1
+  file:
+    matchPaths:
+    - /etc/passwd
+  action:
+    drop

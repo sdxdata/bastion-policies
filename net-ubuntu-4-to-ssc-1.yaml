@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: BastionServiceChainPolicy
+metadata:
+    name: ubuntu-4-to-ssc-1
+spec:
+    chains:
+        - service-base
+        - suricata-ids

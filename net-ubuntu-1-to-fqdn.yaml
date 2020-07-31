@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: BastionNetworkPolicy
+metadata:
+  name: ubuntu-1-to-fqdn
+  microservice_name: multiubuntu
+spec:
+  selector:
+    matchLabels:
+      container: ubuntu-1
+  egress:
+    toFQDNs:
+    - name: www.zerosec.info
+  action:
+    drop

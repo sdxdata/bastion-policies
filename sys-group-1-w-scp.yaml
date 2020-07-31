@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: BastionSystemPolicy
+metadata:
+  name: group-1-w-scp
+  microservice_name: multiubuntu
+spec:
+  selector:
+    matchLabels:
+      group: group-1
+  process:
+    matchNames:
+    - scp
+  file:
+    matchPaths:
+    - /etc/passwd
+  action:
+    drop

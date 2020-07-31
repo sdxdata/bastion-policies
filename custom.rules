@@ -1,0 +1,2 @@
+alert icmp any any -> any any (msg:"ICMP Packet found"; sid:1;)
+alert tcp any any -> any 8080 (msg:"/test1 was accessed"; content:"/test1"; sid:2;)

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: BastionNetworkPolicy
+metadata:
+  name: ubuntu-4-to-group-2
+  microservice_name: multiubuntu
+spec:
+  selector:
+    matchLabels:
+      container: ubuntu-4
+  egress:
+    matchLabels:
+      group: group-2
+    toPorts:
+    - protocol: icmp
+    - protocol: tcp
+      ports: "8080"
+  ssc:
+    ubuntu-4-to-ssc-1
+  action:
+    pass

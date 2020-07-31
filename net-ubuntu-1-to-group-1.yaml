@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: BastionNetworkPolicy
+metadata:
+  name: ubuntu-1-to-group-1
+  microservice_name: multiubuntu
+spec:
+  selector:
+    matchLabels:
+      container: ubuntu-1
+  egress:
+    matchLabels:
+      group: group-1
+  action:
+    pass
