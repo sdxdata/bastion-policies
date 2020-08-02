@@ -9,6 +9,6 @@ spec:
       container: ubuntu-1
   egress:
     toFQDNs:
-    - name: www.zerosec.info
+    - name: remote.zerosec.info
   action:
     drop
