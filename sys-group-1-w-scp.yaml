@@ -11,7 +11,7 @@ spec:
     matchNames:
     - scp
   file:
-    matchPaths:
-    - /etc/passwd
+    matchNames:
+    - secret.txt
   action:
     drop
