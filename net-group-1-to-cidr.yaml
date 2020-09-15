@@ -9,11 +9,9 @@ spec:
       group: group-1
   egress:
     toCIDRs:
-    - cidr: 143.248.38.0/24 # test 143.248.38.51 and 143.248.38.95
+    - cidr: 143.248.38.0/24 # block 143.248.38.51 (sdxdata.com) and 143.248.38.95 (neticraft.com)
       except:
-      - 143.248.38.18/32
-      - 143.248.38.43/32
-      - 143.248.38.44/32
-      - 143.248.38.112/32
+      - 143.248.38.18/32 # allow (sdx4u.net)
+      - 143.248.38.44/32 # (image.zerosec.info for FQDN test)
   action:
     drop

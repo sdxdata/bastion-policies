@@ -18,7 +18,6 @@ spec:
       path: /
     - method: GET
       path: /test1
-    #- method: GET
-    #  path: /test2
+    # block [GET] /teset2
   action:
     pass

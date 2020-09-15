@@ -10,5 +10,6 @@ spec:
   egress:
     toFQDNs:
     - name: remote.zerosec.info
+    # allow image.zerosec.info (for FQDN test)
   action:
     drop
