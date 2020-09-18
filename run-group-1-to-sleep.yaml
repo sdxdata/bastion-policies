@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: BastionRuntimePolicy
+metadata:
+  name: group-1-to-sleep
+  microservice_name: multiubuntu
+spec:
+  selector:
+    matchLabels:
+      group: group-1
+  process:
+    matchPaths:
+    - /bin/sleep
+    - /usr/bin/sleep
+  action:
+    enforce

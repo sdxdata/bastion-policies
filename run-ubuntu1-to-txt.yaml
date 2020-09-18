@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: BastionRuntimePolicy
+metadata:
+  name: ubuntu-1-to-txt
+  microservice_name: multiubuntu
+spec:
+  selector:
+    matchLabels:
+      container: ubuntu-1
+  file:
+    matchPaths:
+    - /secret.txt
+  action:
+    enforce
