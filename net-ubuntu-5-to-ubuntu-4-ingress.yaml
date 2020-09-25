@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: BastionNetworkPolicy
+metadata:
+  name: net-ubuntu-5-to-ubuntu-4-ingress
+  microservice_name: multiubuntu
+spec:
+  selector:
+    matchLabels:
+      container: ubuntu-5
+  ingress:
+    matchLabels:
+      container: ubuntu-4
+    fromPorts:
+    - protocol: tcp
+      ports: "12865"
+  action:
+    pass
