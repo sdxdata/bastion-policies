@@ -9,7 +9,7 @@ spec:
       container: ubuntu-1
   egress:
     toFQDNs:
-    - name: remote.zerosec.info
-    # allow image.zerosec.info (for FQDN test)
+    - name: remote.0x010.com
+    # allow image.0x010.com (for FQDN test)
   action:
     drop
