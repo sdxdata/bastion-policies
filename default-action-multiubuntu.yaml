@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: BastionDefaultNetworkPolicy
+metadata:
+  microservice_name: multiubuntu
+  name: multiubuntu-default-policy
+spec:
+  selector:
+    matchNames:
+      microservice_name: multiubuntu
+  actions:
+    in-cluster: pass
+    out-of-cluster: drop
+    fqdn: drop

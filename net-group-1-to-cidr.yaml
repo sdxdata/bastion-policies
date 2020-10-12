@@ -11,7 +11,7 @@ spec:
     toCIDRs:
     - cidr: 143.248.38.0/24 # block 143.248.38.18 (sdx4u.net) and 143.248.38.95 (neticraft.com)
       except:
-      - 143.248.38.42/32 # allow (image.sdxdata.com)
       - 143.248.38.44/32 # (image.0x010.com for FQDN test)
+      - 143.248.38.47/32 # allow (clair.0x010.com)
   action:
     drop
